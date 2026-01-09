@@ -23,4 +23,9 @@ public:
 
     // Top K slots: count desc, zone asc, hour asc
     std::vector<SlotCount> topBusySlots(int k = 10) const;
+private:
+    std::vector<ZoneCount> cachedZones;
+    std::vector<SlotCount> cachedSlots;
+
 };
+
